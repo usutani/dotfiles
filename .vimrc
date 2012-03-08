@@ -1,0 +1,66 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+
+Bundle 'kana/vim-fakeclip'
+
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'thinca/vim-quickrun'
+Bundle 'snipMate'
+
+Bundle 'tpope/vim-rails'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-haml'
+
+"Bundle 'tpope/vim-cucumber'
+"Bundle 'tpope/vim-endwise'
+"Bundle 'tpope/vim-surround'
+"Bundle 'tpope/vim-fugitive'
+
+filetype plugin indent on
+syntax enable
+
+set nobackup
+set noswapfile
+
+"encoding
+set enc=utf-8
+set fenc=utf-8
+set fencs=utf-8,iso-2022-jp,euc-jp,cp932
+set fileformats=unix,dos
+
+"set tabstop=4
+"set shiftwidth=4
+"set expandtab
+"
+set expandtab
+set tabstop=2 shiftwidth=2 softtabstop=2
+set autoindent
+"
+set showmatch
+set number
+highlight LineNr ctermfg=darkGray guifg=darkGray
+
+set list
+set listchars=trail:.,nbsp:%
+highlight SpecialKey term=underline ctermfg=Blue guifg=Blue
+"全角スペース
+highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
+au BufRead,BufNew * match JpSpace /　/
+
+"nnoremap p :r !pbpaste<CR>
+"vnoremap p :r !pbpaste<CR>
+"nnoremap y :.w !pbcopy<CR><CR>
+"vnoremap y :w !pbcopy<CR><CR>
+
+"quickrun
+let g:quickrun_config = {}
+let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
+augroup UjihisaRSpec
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
+augroup END
+
