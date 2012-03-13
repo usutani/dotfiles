@@ -7,7 +7,7 @@ export EDITOR="mate -w"
 . ~/.nvm/nvm.sh
 
 alias gs='git status'
-alias gl='git log --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches'
+alias gl='git log --color --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches'
 alias rakea='rake assets:precompile RAILS_ENV=production'
 
 rvm use ruby-1.9.3-p0@rails3.2
