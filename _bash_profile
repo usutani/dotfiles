@@ -5,6 +5,8 @@ export LANG=ja_JP.UTF-8
 
 . ~/.nvm/nvm.sh
 
+export LSCOLORS=gxfxcxdxbxegedabagacad
+
 alias ls='ls -G'
 alias gs='git status'
 alias gl='git log --color --graph --pretty=oneline --decorate --date=short --abbrev-commit --branches'
