@@ -43,6 +43,7 @@ set autoindent
 set showmatch
 set number
 highlight LineNr ctermfg=darkGray guifg=darkGray
+set cursorline
 
 set list
 set listchars=trail:.,nbsp:%
