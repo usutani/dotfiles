@@ -1,4 +1,4 @@
-export PATH=/usr/local/bin:$PATH:/usr/local/mysql/bin
+export PATH=/Applications/UpTeX.app/teTeX/bin/:/usr/local/bin:$PATH:/usr/local/mysql/bin
 export LANG=ja_JP.UTF-8
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
