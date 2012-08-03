@@ -13,5 +13,13 @@ alias gl='git log --color --graph --pretty=oneline --decorate --date=short --abb
 alias be='bundle exec'
 alias rakea='rake assets:precompile RAILS_ENV=production'
 
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+function change_ps1_for_git {
+  PS1="\h@\u:\W\$(parse_git_branch) \$ "
+}
+change_ps1_for_git
+
 #rvm use ruby-1.9.3-p0@rails3.2
 rvm use ruby-1.9.2-p290@rails3.2
