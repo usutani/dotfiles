@@ -52,6 +52,12 @@ highlight SpecialKey term=underline ctermfg=Blue guifg=Blue
 highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
 au BufRead,BufNew * match JpSpace /　/
 
+"completion menu color
+hi Pmenu ctermbg=0
+hi PmenuSel ctermbg=4
+hi PmenuSbar ctermbg=2
+hi PmenuThumb ctermfg=3
+
 "nnoremap p :r !pbpaste<CR>
 "vnoremap p :r !pbpaste<CR>
 "nnoremap y :.w !pbcopy<CR><CR>
