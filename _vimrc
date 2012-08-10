@@ -52,6 +52,12 @@ highlight SpecialKey term=underline ctermfg=Blue guifg=Blue
 highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
 au BufRead,BufNew * match JpSpace /　/
 
+" diff color
+hi DiffAdd guibg=DarkMagenta ctermbg=DarkMagenta
+hi DiffDelete guifg=Black guibg=LightMagenta ctermfg=Black ctermbg=LightMagenta
+hi DiffText guibg=DarkGreen ctermfg=Black ctermbg=DarkGreen
+hi DiffChange guibg=Gray30 ctermbg=DarkCyan ctermfg=White
+
 "completion menu color
 hi Pmenu ctermbg=0
 hi PmenuSel ctermbg=4
