@@ -8,16 +8,15 @@ Bundle 'gmarik/vundle'
 Bundle 'kana/vim-fakeclip'
 
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'thinca/vim-quickrun'
-Bundle 'snipMate'
+Bundle 'tpope/vim-endwise'
 Bundle 'kana/vim-smartinput'
+Bundle 'thinca/vim-quickrun'
 
 Bundle 'tpope/vim-rails'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-haml'
+Bundle 'kchmck/vim-coffee-script'
 
 "Bundle 'tpope/vim-cucumber'
-"Bundle 'tpope/vim-endwise'
 "Bundle 'tpope/vim-surround'
 "Bundle 'tpope/vim-fugitive'
 
