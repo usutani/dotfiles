@@ -85,7 +85,7 @@ call smartinput#define_rule({
 \   'filetype': ['html', 'eruby'],
 \ })
 call smartinput#define_rule({
-\   'at': '<.*\%#.*>', 'char': '>', 'input': '<right>',
+\   'at': '<.*\%#>', 'char': '>', 'input': '<right>',
 \   'filetype': ['html', 'eruby'],
 \ })
 
@@ -96,6 +96,6 @@ call smartinput#define_rule({
 \   'filetype': ['eruby'],
 \ })
 call smartinput#define_rule({
-\   'at': '%.*\%#.*%', 'char': '%', 'input': '<right>',
+\   'at': '%.*\%#%', 'char': '%', 'input': '<right>',
 \   'filetype': ['eruby'],
 \ })
