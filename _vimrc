@@ -79,6 +79,13 @@ augroup UjihisaRSpec
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
 augroup END
 
+" Rails
+call smartinput#map_to_trigger('i', '<C-p>', '<C-p>', '<C-p>')
+call smartinput#define_rule({
+\   'at': '\%#', 'char': '<C-p>', 'input': 'params[:]<left>',
+\   'filetype': ['ruby'],
+\ })
+
 " HTML, ERB
 call smartinput#map_to_trigger('i', '<', '<', '<')
 call smartinput#map_to_trigger('i', '>', '>', '>')
