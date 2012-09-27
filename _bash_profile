@@ -27,7 +27,9 @@ OS=`uname -s`
 if [ "$OS" == "Darwin" ]; then
   alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 elif [ "$OS" == "Linux" ]; then
+  echo ""
 else
+  echo ""
 fi
 
 #rvm use ruby-1.9.2-p290@rails3.2
