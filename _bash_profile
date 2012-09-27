@@ -10,7 +10,7 @@ alias be='bundle exec'
 alias rakea='rake assets:precompile RAILS_ENV=production'
 alias tag='ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" -R .'
 
-# Alias definitions.
+# local alias definitions
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
@@ -24,17 +24,11 @@ function change_ps1_for_git {
 }
 change_ps1_for_git
 
-OS=`uname -s`
-if [ "$OS" == "Darwin" ]; then
-  export PATH=/Applications/UpTeX.app/teTeX/bin:/usr/local/bin:$PATH:/usr/local/mysql/bin
-  export LANG=ja_JP.UTF-8
-  export LSCOLORS=gxfxcxdxbxegedabagacad
-  alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
-elif [ "$OS" == "Linux" ]; then
-  echo ""
-else
-  echo ""
-fi
+# environment variables
+export PATH=/Applications/UpTeX.app/teTeX/bin:/usr/local/bin:$PATH:/usr/local/mysql/bin
+export LANG=ja_JP.UTF-8
+export LSCOLORS=gxfxcxdxbxegedabagacad
+alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 
 # Ruby Version Magager
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
