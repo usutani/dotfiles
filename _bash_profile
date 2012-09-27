@@ -32,5 +32,9 @@ else
   echo ""
 fi
 
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
+
 #rvm use ruby-1.9.2-p290@rails3.2
 rvm use ruby-1.9.3-p194@rails3.2
