@@ -1,4 +1,4 @@
-S X 10.7.3, 10.8
+## OS X 10.7.3, 10.8
 
 1. bash:   .bash_profile
 2. xcode:
@@ -9,6 +9,7 @@ S X 10.7.3, 10.8
 6. rvm:    (.rvmrc)
 7. tmux:   .tmux.conf
   1. tmux-MacOSX-pasteboard
+8. exuberant-ctags
 
 ### bash
     git clone https://github.com/usutani/dotfiles.git
@@ -25,6 +26,12 @@ S X 10.7.3, 10.8
 
     ### Set log-encoding to the default encoding for log messages
     log-encoding = UTF-8-mac
+
+#### exuberant-ctags
+    brew install ctags
+
+#### .bashrc
+    alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 
 ## Ubuntu Server 10.4 LTS
 
@@ -49,6 +56,9 @@ http://help.github.com/linux-set-up-git/
     ./configure
     make
     sudo make install
+
+#### exuberant-ctags
+    sudo apt-get install ctags
 
 #### .bashrc
     alias g='git'
