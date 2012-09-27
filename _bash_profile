@@ -23,5 +23,12 @@ function change_ps1_for_git {
 }
 change_ps1_for_git
 
+OS=`uname -s`
+if [ "$OS" == "Darwin" ]; then
+  alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
+elif [ "$OS" == "Linux" ]; then
+else
+fi
+
 #rvm use ruby-1.9.2-p290@rails3.2
 rvm use ruby-1.9.3-p194@rails3.2
