@@ -9,6 +9,7 @@ alias g='git'
 alias be='bundle exec'
 alias rakea='rake assets:precompile RAILS_ENV=production'
 alias tag='ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" -R .'
+alias grepruby='find . -name "*.rb" | xargs grep'
 
 # local alias definitions
 if [ -f ~/.bash_aliases ]; then
