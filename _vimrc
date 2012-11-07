@@ -44,9 +44,6 @@ let loaded_matchparen = 1
 set showmatch
 set number
 highlight LineNr ctermfg=darkGray guifg=darkGray
-setlocal cursorline
-autocmd WinEnter * setlocal cursorline
-autocmd WinLeave * setlocal nocursorline
 
 set list
 set listchars=trail:.,nbsp:%
