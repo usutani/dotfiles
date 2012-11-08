@@ -18,7 +18,7 @@ Bundle 'kchmck/vim-coffee-script'
 
 "Bundle 'tpope/vim-cucumber'
 "Bundle 'tpope/vim-surround'
-"Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on
 syntax enable
