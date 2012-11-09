@@ -82,7 +82,12 @@ smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" 
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
-let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
+let snippets_dir='~/.vim/bundle/snipmate-snippets/snippets'
+"FIXME
+if isdirectory(snippets_dir)
+  let g:neosnippet#snippets_directory=snippets_dir
+endif
+"let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
 
 "quickrun
 let g:quickrun_config = {}
