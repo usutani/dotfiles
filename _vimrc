@@ -10,6 +10,7 @@ Bundle 'kana/vim-fakeclip'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-endwise'
 Bundle 'kana/vim-smartinput'
+Bundle 'usutani/snipmate.vim'
 Bundle 'thinca/vim-quickrun'
 
 Bundle 'tpope/vim-rails'
