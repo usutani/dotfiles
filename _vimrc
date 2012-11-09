@@ -7,10 +7,14 @@ Bundle 'gmarik/vundle'
 
 Bundle 'kana/vim-fakeclip'
 
+Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neosnippet'
+"TODO Bundle 'taichouchou2/vim-rsense'
+
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-endwise'
 Bundle 'kana/vim-smartinput'
-Bundle 'usutani/snipmate.vim'
+"FIXME Bundle 'usutani/snipmate.vim'
 Bundle 'thinca/vim-quickrun'
 
 Bundle 'tpope/vim-rails'
@@ -69,6 +73,16 @@ hi PmenuThumb ctermfg=3
 "vnoremap p :r !pbpaste<CR>
 "nnoremap y :.w !pbcopy<CR><CR>
 "vnoremap y :w !pbcopy<CR><CR>
+
+"neocomplcache
+imap <C-k> <Plug>(neosnippet_expand_or_jump)
+smap <C-k> <Plug>(neosnippet_expand_or_jump)
+imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+if has('conceal')
+  set conceallevel=2 concealcursor=i
+endif
+let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
 
 "quickrun
 let g:quickrun_config = {}
