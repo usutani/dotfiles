@@ -6,6 +6,7 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 Bundle 'kana/vim-fakeclip'
+Bundle 'ack.vim'
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
@@ -68,6 +69,10 @@ hi Pmenu ctermbg=0
 hi PmenuSel ctermbg=4
 hi PmenuSbar ctermbg=2
 hi PmenuThumb ctermfg=3
+
+"ack.vim
+map <C-W>a :let a=expand("<cword>")<CR>:tabnew<CR>:Ack <C-R>=expand(a)<CR> ./<CR>
+map <C-W>A :let a=expand("<cword>")<CR>:tabnew<CR>:Ack <C-R>=expand(a)<CR> ./
 
 "nnoremap p :r !pbpaste<CR>
 "vnoremap p :r !pbpaste<CR>
