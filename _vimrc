@@ -88,7 +88,10 @@ if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
 let snippets_dir='~/.vim/bundle/snipmate-snippets/snippets'
-"FIXME
+"FIXME - Disable NeoSnippetSource.
+"~/.vim/bundle/neosnippet
+"2aed9fa - Added :NeoSnippetSource.
+"5952b6e (HEAD) - Refactored documentation.
 if isdirectory(snippets_dir)
   let g:neosnippet#snippets_directory=snippets_dir
 endif
