@@ -21,6 +21,8 @@ Bundle 'thinca/vim-quickrun'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-haml'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'pangloss/vim-javascript'
+Bundle 'briancollins/vim-jst'
 
 "Bundle 'tpope/vim-cucumber'
 "Bundle 'tpope/vim-surround'
