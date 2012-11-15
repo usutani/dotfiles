@@ -72,6 +72,9 @@ hi PmenuSel ctermbg=4
 hi PmenuSbar ctermbg=2
 hi PmenuThumb ctermfg=3
 
+"insert mode keymap
+imap <C-e> <END>
+
 "ack.vim
 map <C-W>a :let a=expand("<cword>")<CR>:tabnew<CR>:Ack <C-R>=expand(a)<CR> ./<CR>
 map <C-W>A :let a=expand("<cword>")<CR>:tabnew<CR>:Ack <C-R>=expand(a)<CR> ./
