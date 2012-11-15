@@ -10,6 +10,7 @@ alias be='bundle exec'
 alias rakea='rake assets:precompile RAILS_ENV=production'
 alias tag='ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" -R .'
 alias grepruby='find . -name "*.rb" | xargs grep'
+alias escapehtml='pbpaste | ruby -r cgi -e "while s=gets; puts CGI.escapeHTML(s.chomp); end" | pbcopy'
 
 # local alias definitions
 if [ -f ~/.bash_aliases ]; then
