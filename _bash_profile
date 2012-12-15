@@ -34,7 +34,7 @@ alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 
 # Ruby Version Magager
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-rvm use ruby-1.9.3-p194@rails3.2
+#rvm use ruby-1.9.3-p327@rails3.2
 
 # Node Version Manager
 . ~/.nvm/nvm.sh
