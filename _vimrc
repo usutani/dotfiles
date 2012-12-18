@@ -27,6 +27,7 @@ Bundle 'briancollins/vim-jst'
 "Bundle 'tpope/vim-cucumber'
 "Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
+Bundle 'gregsexton/gitv'
 
 filetype plugin indent on
 syntax enable
