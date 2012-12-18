@@ -97,7 +97,7 @@ let snippets_dir='~/.vim/bundle/snipmate-snippets/snippets'
 if isdirectory(snippets_dir)
   let g:neosnippet#snippets_directory=snippets_dir
 endif
-"let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
+let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
 
 "quickrun
 let g:quickrun_config = {}
