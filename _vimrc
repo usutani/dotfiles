@@ -15,7 +15,7 @@ Bundle 'taichouchou2/vim-rsense'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-endwise'
 Bundle 'kana/vim-smartinput'
-"FIXME Bundle 'usutani/snipmate.vim'
+Bundle 'usutani/snipmate.vim'
 Bundle 'thinca/vim-quickrun'
 
 Bundle 'tpope/vim-rails'
@@ -93,11 +93,10 @@ smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" 
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
-let snippets_dir='~/.vim/bundle/snipmate-snippets/snippets'
+let snippets_dir='~/.vim/bundle/snipmate.vim/snippets'
 if isdirectory(snippets_dir)
   let g:neosnippet#snippets_directory=snippets_dir
 endif
-let g:neosnippet#snippets_directory='~/.vim/bundle/snipmate-snippets/snippets'
 
 "quickrun
 let g:quickrun_config = {}
