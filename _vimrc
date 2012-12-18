@@ -10,7 +10,7 @@ Bundle 'ack.vim'
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
-"TODO Bundle 'taichouchou2/vim-rsense'
+Bundle 'taichouchou2/vim-rsense'
 
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-endwise'
