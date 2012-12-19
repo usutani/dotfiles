@@ -7,6 +7,8 @@ Bundle 'gmarik/vundle'
 
 Bundle 'kana/vim-fakeclip'
 Bundle 'ack.vim'
+Bundle 'L9'
+Bundle 'FuzzyFinder'
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
@@ -79,6 +81,10 @@ imap <C-e> <END>
 "ack.vim
 map <C-W>a :let a=expand("<cword>")<CR>:tabnew<CR>:Ack <C-R>=expand(a)<CR> ./<CR>
 map <C-W>A :let a=expand("<cword>")<CR>:tabnew<CR>:Ack <C-R>=expand(a)<CR> ./
+
+"FuzzyFinder
+nmap ff :FufFile **/<CR>
+nmap fb :FufBuffer<CR>
 
 "nnoremap p :r !pbpaste<CR>
 "vnoremap p :r !pbpaste<CR>
