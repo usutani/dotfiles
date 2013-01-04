@@ -56,6 +56,13 @@ set showmatch
 set number
 highlight LineNr ctermfg=darkGray guifg=darkGray
 
+set textwidth=0
+if exists('&colorcolumn')
+    set colorcolumn=+1
+    autocmd FileType vim,ruby setlocal textwidth=80
+endif
+highlight ColorColumn ctermbg=235 guibg=#262626
+
 set list
 set listchars=trail:.,nbsp:%
 highlight SpecialKey term=underline ctermfg=Blue guifg=Blue
