@@ -26,6 +26,8 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
 
+Bundle 'usutani/vim-golang'
+
 "Bundle 'tpope/vim-cucumber'
 "Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
