@@ -48,6 +48,13 @@ set fileformats=unix,dos
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
+" Go
+autocmd FileType go set noexpandtab
+autocmd FileType go set tabstop=8 shiftwidth=8 softtabstop=8
+autocmd FileType go set nolist
+if $GOROOT != ''
+  set rtp+=$GOROOT/misc/vim
+endif
 
 let loaded_matchparen = 1
 set showmatch
