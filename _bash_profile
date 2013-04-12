@@ -44,3 +44,6 @@ alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 export GOROOT=/usr/local/Cellar/go/1.0.3
 export GOPATH=$HOME/_go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# PostgreSQL.app
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
