@@ -15,6 +15,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'kana/vim-smartinput'
 Bundle 'kana/vim-fakeclip'
 Bundle 'usutani/snipmate.vim'
+Bundle 'mattn/emmet-vim'
 "Bundle 'tpope/vim-surround'
 Bundle 'thinca/vim-quickrun'
 
@@ -152,3 +153,11 @@ call smartinput#define_rule({
 \   'at': '%.*\%#%', 'char': '%', 'input': '<right>',
 \   'filetype': ['eruby'],
 \ })
+
+"emmet-vim
+let g:user_emmet_settings = {
+\  'lang': 'ja',
+\  'html': {
+\    'indentation' : '  ',
+\  },
+\}
