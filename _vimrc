@@ -5,31 +5,29 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
-Bundle 'kana/vim-fakeclip'
 Bundle 'ack.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
-Bundle 'taichouchou2/vim-rsense'
-
-Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-endwise'
 Bundle 'kana/vim-smartinput'
+Bundle 'kana/vim-fakeclip'
 Bundle 'usutani/snipmate.vim'
+"Bundle 'tpope/vim-surround'
 Bundle 'thinca/vim-quickrun'
 
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'taichouchou2/vim-rsense'
+Bundle 'usutani/vim-golang'
 Bundle 'tpope/vim-rails'
+"Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-haml'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'pangloss/vim-javascript'
 Bundle 'briancollins/vim-jst'
 
-Bundle 'usutani/vim-golang'
-
-"Bundle 'tpope/vim-cucumber'
-"Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
 Bundle 'gregsexton/gitv'
 
@@ -75,7 +73,7 @@ highlight SpecialKey term=underline ctermfg=Blue guifg=Blue
 highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
 au BufRead,BufNew * match JpSpace /　/
 
-" diff color
+"diff color
 hi DiffAdd guibg=DarkMagenta ctermbg=DarkMagenta
 hi DiffDelete guifg=Black guibg=LightMagenta ctermfg=Black ctermbg=LightMagenta
 hi DiffText guibg=DarkGreen ctermfg=Black ctermbg=DarkGreen
@@ -124,6 +122,7 @@ augroup UjihisaRSpec
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
 augroup END
 
+"smartinput
 " Rails
 call smartinput#map_to_trigger('i', '<C-p>', '<C-p>', '<C-p>')
 call smartinput#define_rule({
