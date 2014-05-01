@@ -11,6 +11,7 @@ Bundle 'FuzzyFinder'
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neosnippet-snippets'
 Bundle 'tpope/vim-endwise'
 Bundle 'kana/vim-smartinput'
 Bundle 'kana/vim-fakeclip'
