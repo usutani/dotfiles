@@ -34,10 +34,6 @@ export LANG=ja_JP.UTF-8
 export LSCOLORS=gxfxcxdxbxegedabagacad
 alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 
-# Ruby Version Magager
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
-#rvm use ruby-1.9.3-p327@rails3.2
-
 # Go
 export GOROOT=/usr/local/Cellar/go/1.0.3
 export GOPATH=$HOME/_go
@@ -48,3 +44,6 @@ PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # Oracle instant client
 source ~/.oracle_client
+
+# Ruby Version Magager
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
