@@ -21,6 +21,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'thinca/vim-quickrun'
 
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'scrooloose/syntastic'
 Bundle 'taichouchou2/vim-rsense'
 Bundle 'usutani/vim-golang'
 Bundle 'tpope/vim-rails'
@@ -123,6 +124,10 @@ augroup UjihisaRSpec
   autocmd!
   autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
 augroup END
+
+" Rubocop
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
 
 "smartinput
 " Rails
