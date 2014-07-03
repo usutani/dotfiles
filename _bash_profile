@@ -12,6 +12,7 @@ alias tag='ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" -R .'
 alias grepruby='find . -name "*.rb" | xargs grep'
 alias escapehtml='pbpaste | ruby -r cgi -e "while s=gets; puts CGI.escapeHTML(s.chomp); end" | pbcopy'
 alias dssd='find . -name ".DS_Store" -delete'
+alias gudp='gud push -c '\''bundle exec rake db:migrate db:seed && bundle exec rails s -p $PORT'\'''
 
 # local alias definitions
 if [ -f ~/.bash_aliases ]; then
