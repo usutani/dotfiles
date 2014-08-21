@@ -5,6 +5,7 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+Bundle 'a.vim'
 Bundle 'ack.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
