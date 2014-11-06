@@ -44,7 +44,7 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # Oracle instant client
-source ~/.oracle_client
+# source ~/.oracle_client
 
 # Ruby Version Magager
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
