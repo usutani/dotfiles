@@ -30,27 +30,27 @@ change_ps1_for_git
 
 # environment variables
 export EDITOR=vim
-export PATH=/Applications/UpTeX.app/teTeX/bin:/usr/local/bin:$PATH:/usr/local/mysql/bin:/usr/local/share/npm/bin
+# export PATH=/Applications/UpTeX.app/teTeX/bin:/usr/local/bin:$PATH:/usr/local/mysql/bin:/usr/local/share/npm/bin
 export LANG=ja_JP.UTF-8
 export LSCOLORS=gxfxcxdxbxegedabagacad
 alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 
 # Go
-export GOROOT=/usr/local/Cellar/go/1.0.3
-export GOPATH=$HOME/_go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+# export GOROOT=/usr/local/Cellar/go/1.0.3
+# export GOPATH=$HOME/_go
+# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # PostgreSQL.app
-PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+# PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
 # Oracle instant client
 # source ~/.oracle_client
 
 # Ruby Version Magager
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 # The next line updates PATH for the Google Cloud SDK.
-source /Users/usutani/google-cloud-sdk/path.bash.inc
+# source /Users/usutani/google-cloud-sdk/path.bash.inc
 
 # The next line enables bash completion for gcloud.
-source /Users/usutani/google-cloud-sdk/completion.bash.inc
+# source /Users/usutani/google-cloud-sdk/completion.bash.inc
