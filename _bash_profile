@@ -37,3 +37,6 @@ alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 # Oracle instant client
 # source ~/.oracle_client
 
+# rbenv
+eval "$(rbenv init -)"
+
