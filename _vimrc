@@ -1,43 +1,45 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
 
-Bundle 'gmarik/vundle'
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim
+  call neobundle#begin(expand('~/.vim/bundle/'))
+endif
 
-Bundle 'a.vim'
-Bundle 'ack.vim'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+NeoBundle 'a.vim'
+NeoBundle 'ack.vim'
+NeoBundle 'L9'
+NeoBundle 'FuzzyFinder'
 
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neosnippet'
-Bundle 'Shougo/neosnippet-snippets'
-Bundle 'tpope/vim-endwise'
-Bundle 'kana/vim-smartinput'
-Bundle 'kana/vim-fakeclip'
-Bundle 'usutani/snipmate.vim'
-Bundle 'mattn/emmet-vim'
-"Bundle 'tpope/vim-surround'
-Bundle 'thinca/vim-quickrun'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'kana/vim-smartinput'
+NeoBundle 'kana/vim-fakeclip'
+NeoBundle 'usutani/snipmate.vim'
+NeoBundle 'mattn/emmet-vim'
+"NeoBundle 'tpope/vim-surround'
+NeoBundle 'thinca/vim-quickrun'
 
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'scrooloose/syntastic'
-Bundle 'taichouchou2/vim-rsense'
-Bundle 'usutani/vim-golang'
-Bundle 'toyamarinyon/vim-swift'
-Bundle 'tpope/vim-rails'
-"Bundle 'tpope/vim-cucumber'
-Bundle 'tpope/vim-haml'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'pangloss/vim-javascript'
-Bundle 'briancollins/vim-jst'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'scrooloose/syntastic'
+NeoBundle 'taichouchou2/vim-rsense'
+NeoBundle 'usutani/vim-golang'
+NeoBundle 'toyamarinyon/vim-swift'
+NeoBundle 'tpope/vim-rails'
+"NeoBundle 'tpope/vim-cucumber'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'briancollins/vim-jst'
 
-Bundle 'tpope/vim-fugitive'
-Bundle 'gregsexton/gitv'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'gregsexton/gitv'
 
 filetype plugin indent on
-syntax enable
+filetype indent on
+syntax on
 
 set nobackup
 set noswapfile
@@ -133,39 +135,39 @@ let g:syntastic_ruby_checkers = ['rubocop']
 
 "smartinput
 " Rails
-call smartinput#map_to_trigger('i', '<C-p>', '<C-p>', '<C-p>')
-call smartinput#define_rule({
-\   'at': '\%#', 'char': '<C-p>', 'input': 'params[:]<left>',
-\   'filetype': ['ruby'],
-\ })
+"call smartinput#map_to_trigger('i', '<C-p>', '<C-p>', '<C-p>')
+"call smartinput#define_rule({
+"\   'at': '\%#', 'char': '<C-p>', 'input': 'params[:]<left>',
+"\   'filetype': ['ruby'],
+"\ })
 
 " HTML, ERB
-call smartinput#map_to_trigger('i', '<', '<', '<')
-call smartinput#map_to_trigger('i', '>', '>', '>')
-call smartinput#define_rule({
-\   'at': '\%#', 'char': '<', 'input': '<><left>',
-\   'filetype': ['html', 'eruby'],
-\ })
-call smartinput#define_rule({
-\   'at': '<.*\%#>', 'char': '>', 'input': '<right>',
-\   'filetype': ['html', 'eruby'],
-\ })
+"call smartinput#map_to_trigger('i', '<', '<', '<')
+"call smartinput#map_to_trigger('i', '>', '>', '>')
+"call smartinput#define_rule({
+"\   'at': '\%#', 'char': '<', 'input': '<><left>',
+"\   'filetype': ['html', 'eruby'],
+"\ })
+"call smartinput#define_rule({
+"\   'at': '<.*\%#>', 'char': '>', 'input': '<right>',
+"\   'filetype': ['html', 'eruby'],
+"\ })
 
 " ERB
-call smartinput#map_to_trigger('i', '%', '%', '%')
-call smartinput#define_rule({
-\   'at': '<\%#', 'char': '%', 'input': '%%<left>',
-\   'filetype': ['eruby'],
-\ })
-call smartinput#define_rule({
-\   'at': '%.*\%#%', 'char': '%', 'input': '<right>',
-\   'filetype': ['eruby'],
-\ })
+"call smartinput#map_to_trigger('i', '%', '%', '%')
+"call smartinput#define_rule({
+"\   'at': '<\%#', 'char': '%', 'input': '%%<left>',
+"\   'filetype': ['eruby'],
+"\ })
+"call smartinput#define_rule({
+"\   'at': '%.*\%#%', 'char': '%', 'input': '<right>',
+"\   'filetype': ['eruby'],
+"\ })
 
 "emmet-vim
-let g:user_emmet_settings = {
-\  'lang': 'ja',
-\  'html': {
-\    'indentation' : '  ',
-\  },
-\}
+"let g:user_emmet_settings = {
+"\  'lang': 'ja',
+"\  'html': {
+"\    'indentation' : '  ',
+"\  },
+"\}
