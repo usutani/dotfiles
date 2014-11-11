@@ -22,8 +22,8 @@ NeoBundle 'briancollins/vim-jst'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
 
-call neobundle#end()
-  if has('vim_starting')
+if has('vim_starting')
+  call neobundle#end()
 endif
 
 filetype plugin indent on
@@ -77,7 +77,7 @@ hi PmenuThumb ctermfg=3
 "insert mode keymap
 imap <C-e> <END>
 
-" Rubocop
+" RuboCop
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 
