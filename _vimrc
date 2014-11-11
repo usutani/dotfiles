@@ -6,7 +6,6 @@ if has('vim_starting')
   call neobundle#begin(expand('~/.vim/bundle/'))
 endif
 
-NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-endwise'
@@ -77,19 +76,6 @@ hi PmenuThumb ctermfg=3
 
 "insert mode keymap
 imap <C-e> <END>
-
-"neocomplcache
-imap <C-k> <Plug>(neosnippet_expand_or_jump)
-smap <C-k> <Plug>(neosnippet_expand_or_jump)
-imap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-smap <expr><TAB> neosnippet#expandable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-if has('conceal')
-  set conceallevel=2 concealcursor=i
-endif
-let snippets_dir='~/.vim/bundle/snipmate.vim/snippets'
-if isdirectory(snippets_dir)
-  let g:neosnippet#snippets_directory=snippets_dir
-endif
 
 " Rubocop
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
