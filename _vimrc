@@ -6,36 +6,26 @@ if has('vim_starting')
   call neobundle#begin(expand('~/.vim/bundle/'))
 endif
 
-NeoBundle 'a.vim'
-NeoBundle 'ack.vim'
-NeoBundle 'L9'
-NeoBundle 'FuzzyFinder'
-
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-endwise'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-fakeclip'
-NeoBundle 'usutani/snipmate.vim'
-NeoBundle 'mattn/emmet-vim'
-"NeoBundle 'tpope/vim-surround'
-NeoBundle 'thinca/vim-quickrun'
 
 NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'scrooloose/syntastic'
-NeoBundle 'taichouchou2/vim-rsense'
-NeoBundle 'usutani/vim-golang'
-NeoBundle 'toyamarinyon/vim-swift'
+NeoBundle 'scrooloose/syntastic' " RuboCop
 NeoBundle 'tpope/vim-rails'
-"NeoBundle 'tpope/vim-cucumber'
-NeoBundle 'tpope/vim-haml'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'briancollins/vim-jst'
 
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'gregsexton/gitv'
+
+call neobundle#end()
+  if has('vim_starting')
+endif
 
 filetype plugin indent on
 filetype indent on
@@ -53,13 +43,6 @@ set fileformats=unix,dos
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
-" Go
-autocmd FileType go set noexpandtab
-autocmd FileType go set tabstop=8 shiftwidth=8 softtabstop=8
-autocmd FileType go set nolist
-if $GOROOT != ''
-  set rtp+=$GOROOT/misc/vim
-endif
 
 let loaded_matchparen = 1
 set showmatch
@@ -95,19 +78,6 @@ hi PmenuThumb ctermfg=3
 "insert mode keymap
 imap <C-e> <END>
 
-"ack.vim
-map <C-W>a :let a=expand("<cword>")<CR>:tabnew<CR>:Ack <C-R>=expand(a)<CR> ./<CR>
-map <C-W>A :let a=expand("<cword>")<CR>:tabnew<CR>:Ack <C-R>=expand(a)<CR> ./
-
-"FuzzyFinder
-nmap ff :FufFile **/<CR>
-nmap fb :FufBuffer<CR>
-
-"nnoremap p :r !pbpaste<CR>
-"vnoremap p :r !pbpaste<CR>
-"nnoremap y :.w !pbcopy<CR><CR>
-"vnoremap y :w !pbcopy<CR><CR>
-
 "neocomplcache
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
 smap <C-k> <Plug>(neosnippet_expand_or_jump)
@@ -121,53 +91,7 @@ if isdirectory(snippets_dir)
   let g:neosnippet#snippets_directory=snippets_dir
 endif
 
-"quickrun
-let g:quickrun_config = {}
-let g:quickrun_config['ruby.rspec'] = {'command': 'rspec'}
-augroup UjihisaRSpec
-  autocmd!
-  autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
-augroup END
-
 " Rubocop
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 
-"smartinput
-" Rails
-"call smartinput#map_to_trigger('i', '<C-p>', '<C-p>', '<C-p>')
-"call smartinput#define_rule({
-"\   'at': '\%#', 'char': '<C-p>', 'input': 'params[:]<left>',
-"\   'filetype': ['ruby'],
-"\ })
-
-" HTML, ERB
-"call smartinput#map_to_trigger('i', '<', '<', '<')
-"call smartinput#map_to_trigger('i', '>', '>', '>')
-"call smartinput#define_rule({
-"\   'at': '\%#', 'char': '<', 'input': '<><left>',
-"\   'filetype': ['html', 'eruby'],
-"\ })
-"call smartinput#define_rule({
-"\   'at': '<.*\%#>', 'char': '>', 'input': '<right>',
-"\   'filetype': ['html', 'eruby'],
-"\ })
-
-" ERB
-"call smartinput#map_to_trigger('i', '%', '%', '%')
-"call smartinput#define_rule({
-"\   'at': '<\%#', 'char': '%', 'input': '%%<left>',
-"\   'filetype': ['eruby'],
-"\ })
-"call smartinput#define_rule({
-"\   'at': '%.*\%#%', 'char': '%', 'input': '<right>',
-"\   'filetype': ['eruby'],
-"\ })
-
-"emmet-vim
-"let g:user_emmet_settings = {
-"\  'lang': 'ja',
-"\  'html': {
-"\    'indentation' : '  ',
-"\  },
-"\}
