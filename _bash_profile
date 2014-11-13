@@ -4,6 +4,13 @@ alias la='ls -A'
 alias ll='ls -alF'
 alias ls='ls -G'
 
+# cd aliases
+alias o='open .'
+alias cdd='cd ~/Desktop'
+alias u='cd ..'
+alias uu='cd ../../'
+alias uuu='cd ../../../'
+
 # development aliases
 alias g='git'
 alias be='bundle exec'
