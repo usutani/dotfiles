@@ -47,3 +47,7 @@ alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 # rbenv
 eval "$(rbenv init -)"
 
+# npm
+if [ -x "`which npm`" ]; then
+  export PATH=$(npm config get prefix)/bin:$PATH
+fi
