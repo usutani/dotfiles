@@ -49,5 +49,5 @@ eval "$(rbenv init -)"
 
 # npm
 if [ -x "`which npm`" ]; then
-  export PATH=$(npm config get prefix)/bin:$PATH
+  export PATH=$PATH:$(npm config get prefix)/bin
 fi
