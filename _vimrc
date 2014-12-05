@@ -78,6 +78,6 @@ hi PmenuThumb ctermfg=3
 imap <C-e> <END>
 
 " RuboCop
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby'] }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript', 'json'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 
