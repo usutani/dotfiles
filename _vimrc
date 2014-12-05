@@ -77,7 +77,7 @@ hi PmenuThumb ctermfg=3
 "insert mode keymap
 imap <C-e> <END>
 
-" RuboCop
+" RuboCop, JSHint
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript', 'json'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 
