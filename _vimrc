@@ -12,6 +12,17 @@ NeoBundle 'tpope/vim-endwise'
 NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-fakeclip'
 
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make -f make_mac.mak',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+NeoBundle 'itchyny/dictionary.vim'
+
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'scrooloose/syntastic' " RuboCop
 NeoBundle 'tpope/vim-rails'
