@@ -21,7 +21,10 @@ NeoBundle 'Shougo/vimproc.vim', {
 \     'unix' : 'gmake',
 \    },
 \ }
-NeoBundle 'itchyny/dictionary.vim'
+let os=substitute(system('uname'), '\n', '', '')
+if os == 'Darwin' || os == 'Mac'
+  NeoBundle 'itchyny/dictionary.vim'
+endif
 
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'scrooloose/syntastic' " RuboCop
