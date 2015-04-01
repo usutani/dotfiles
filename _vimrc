@@ -77,10 +77,10 @@ highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
 au BufRead,BufNew * match JpSpace /　/
 
 "diff color
-hi DiffAdd guibg=DarkMagenta ctermbg=DarkMagenta
-hi DiffDelete guifg=Black guibg=LightMagenta ctermfg=Black ctermbg=LightMagenta
-hi DiffText guibg=DarkGreen ctermfg=Black ctermbg=DarkGreen
-hi DiffChange guibg=Gray30 ctermbg=DarkCyan ctermfg=White
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=52
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=17
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
 
 "completion menu color
 hi Pmenu ctermbg=0
