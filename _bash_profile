@@ -77,6 +77,9 @@ alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
 # rbenv
 eval "$(rbenv init -)"
 
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 # npm
 if [ -x "`which npm`" ]; then
   export PATH=$PATH:$(npm config get prefix)/bin
