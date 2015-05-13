@@ -69,7 +69,7 @@ function sedall() {
 export EDITOR=vim
 export LANG=ja_JP.UTF-8
 export LSCOLORS=gxfxcxdxbxegedabagacad
-alias ctags='/usr/local/Cellar/ctags/5.8/bin/ctags'
+alias ctags='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 
 # Oracle instant client
 # source ~/.oracle_client
