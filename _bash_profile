@@ -88,3 +88,11 @@ fi
 # Homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+# Ruby/Rails
+function makegemfile() {
+cat << EOS > Gemfile
+source "http://rubygems.org"
+gem "rails", "4.2.5"
+EOS
+}
+
