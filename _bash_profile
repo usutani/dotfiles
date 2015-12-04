@@ -96,3 +96,6 @@ gem "rails", "4.2.5"
 EOS
 }
 
+# Java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+echo "JAVA_HOME=$JAVA_HOME"
