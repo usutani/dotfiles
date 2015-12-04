@@ -98,4 +98,5 @@ EOS
 
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.6`
+export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 echo "JAVA_HOME=$JAVA_HOME"
