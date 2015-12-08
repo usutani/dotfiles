@@ -97,3 +97,11 @@ imap <C-e> <END>
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript', 'json'] }
 let g:syntastic_ruby_checkers = ['rubocop']
 
+"Go
+if expand("%:t") =~ ".*\.go"
+  set noexpandtab
+  set tabstop=4
+  set shiftwidth=4
+  set softtabstop=4
+  set nolist
+endif
