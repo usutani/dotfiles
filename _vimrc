@@ -6,6 +6,8 @@ if has('vim_starting')
   call neobundle#begin(expand('~/.vim/bundle/'))
 endif
 
+NeoBundle 'w0ng/vim-hybrid'
+
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-endwise'
@@ -45,6 +47,10 @@ endif
 filetype plugin indent on
 filetype indent on
 syntax on
+
+"colorscheme
+set background=dark
+colorscheme hybrid
 
 set nobackup
 set noswapfile
