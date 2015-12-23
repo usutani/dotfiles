@@ -12,6 +12,7 @@ alias uu='cd ../../'
 alias uuu='cd ../../../'
 
 # development aliases
+alias r='bin/rails'
 alias g='git'
 alias be='bundle exec'
 alias rakea='bundle exec rake assets:precompile RAILS_ENV=production'
