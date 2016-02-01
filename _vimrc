@@ -8,6 +8,8 @@ endif
 
 NeoBundle 'w0ng/vim-hybrid'
 
+NeoBundle 'scrooloose/nerdtree'
+
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-endwise'
