@@ -9,6 +9,7 @@ endif
 NeoBundle 'w0ng/vim-hybrid'
 
 NeoBundle 'justinmk/vim-dirvish'
+NeoBundle 'ctrlpvim/ctrlp.vim'
 
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
