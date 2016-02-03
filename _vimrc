@@ -57,6 +57,7 @@ colorscheme hybrid
 
 set nobackup
 set noswapfile
+set clipboard+=unnamed
 
 "encoding
 set enc=utf-8
