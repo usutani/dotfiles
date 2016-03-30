@@ -73,6 +73,7 @@ let loaded_matchparen = 1
 set showmatch
 set number
 highlight LineNr ctermfg=darkGray guifg=darkGray
+set hlsearch
 
 set textwidth=0
 if exists('&colorcolumn')
