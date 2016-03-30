@@ -10,13 +10,7 @@ NeoBundle 'w0ng/vim-hybrid'
 
 NeoBundle 'justinmk/vim-dirvish'
 NeoBundle 'ctrlpvim/ctrlp.vim'
-
-NeoBundle 'Shougo/neosnippet'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'kana/vim-smartinput'
 NeoBundle 'kana/vim-fakeclip'
-
 NeoBundle 'Shougo/vimproc.vim', {
 \ 'build' : {
 \     'windows' : 'tools\\update-dll-mingw',
@@ -26,10 +20,6 @@ NeoBundle 'Shougo/vimproc.vim', {
 \     'unix' : 'gmake',
 \    },
 \ }
-let os=substitute(system('uname'), '\n', '', '')
-if os == 'Darwin' || os == 'Mac'
-  NeoBundle 'itchyny/dictionary.vim'
-endif
 
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'scrooloose/syntastic' " RuboCop
