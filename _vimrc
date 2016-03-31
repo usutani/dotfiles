@@ -58,6 +58,7 @@ set fileformats=unix,dos
 set expandtab
 set tabstop=2 shiftwidth=2 softtabstop=2
 set autoindent
+set backspace=indent,eol,start
 
 let loaded_matchparen = 1
 set showmatch
