@@ -1,44 +1,52 @@
-set nocompatible
-filetype off
-
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle/'))
+if &compatible
+  set nocompatible
 endif
+set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-NeoBundle 'w0ng/vim-hybrid'
+call dein#begin(expand('~/.vim/dein'))
 
-NeoBundle 'justinmk/vim-dirvish'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'kana/vim-fakeclip'
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
+call dein#add('w0ng/vim-hybrid')
+call dein#add('justinmk/vim-dirvish')
+call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('kana/vim-fakeclip') "tmux
 
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'scrooloose/syntastic' " RuboCop
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'briancollins/vim-jst'
+"call dein#add('neocomplete.vim')
+"call dein#add('Shougo/neosnippet')
+"call dein#add('Shougo/neosnippet-snippets')
 
-NeoBundle 'fatih/vim-go'
+call dein#add('vim-ruby/vim-ruby')
+"call dein#add('tpope/vim-endwise')
+call dein#add('ngmy/vim-rubocop')
+call dein#add('tpope/vim-rails')
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('pangloss/vim-javascript')
+call dein#add('briancollins/vim-jst')
 
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'gregsexton/gitv'
+call dein#add('fatih/vim-go')
 
-if has('vim_starting')
-  call neobundle#end()
-endif
+call dein#add('tpope/vim-fugitive')
+call dein#add('gregsexton/gitv')
+
+call dein#end()
+
+"neocomplete
+"let g:neocomplete#enable_at_startup = 1
+"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
+"if !exists('g:neocomplete#force_omni_input_patterns')
+"  let g:neocomplete#force_omni_input_patterns = {}
+"endif
+"let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+
+"neosnippet
+"imap <C-k> <Plug>(neosnippet_expand_or_jump)
+"smap <C-k> <Plug>(neosnippet_expand_or_jump)
+"imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+"smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+"if has('conceal')
+"  set conceallevel=2 concealcursor=i
+"endif
 
 filetype plugin indent on
-filetype indent on
 syntax on
 
 "colorscheme
@@ -79,6 +87,13 @@ highlight SpecialKey term=underline ctermfg=Blue guifg=Blue
 "全角スペース
 highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
 au BufRead,BufNew * match JpSpace /　/
+
+"行末スペース
+augroup HighlightTrailingSpaces
+  autocmd!
+  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
+augroup END
 
 "diff color
 highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22
