@@ -14,6 +14,7 @@ alias uuu='cd ../../../'
 # development aliases
 alias r='bin/rails'
 alias g='git'
+alias v='vim'
 alias be='bundle exec'
 alias rakea='bundle exec rake assets:precompile RAILS_ENV=production'
 alias tag='ctags --langmap=RUBY:.rb --exclude="*.js"  --exclude=".git*" --exclude="vendor" -R .'
