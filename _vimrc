@@ -49,6 +49,10 @@ call dein#end()
 filetype plugin indent on
 syntax on
 
+if dein#check_install()
+  call dein#install()
+endif
+
 "colorscheme
 set background=dark
 colorscheme hybrid
