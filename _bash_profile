@@ -90,6 +90,11 @@ fi
 # Homebrew
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
+## bash-completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
 # Ruby/Rails
 function makegemfile() {
 cat << EOS > Gemfile
