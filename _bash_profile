@@ -95,14 +95,6 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
 . $(brew --prefix)/etc/bash_completion
 fi
 
-# Ruby/Rails
-function makegemfile() {
-cat << EOS > Gemfile
-source "http://rubygems.org"
-gem "rails", "4.2.5"
-EOS
-}
-
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
