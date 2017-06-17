@@ -23,6 +23,7 @@ alias escapehtml='pbpaste | ruby -r cgi -e "while s=gets; puts CGI.escapeHTML(s.
 alias dssd='find . -name ".DS_Store" -delete'
 alias gudp='gud push -c '\''bundle exec rake db:migrate db:seed && bundle exec rails s -p $PORT'\'''
 alias dp='echo -n `date +%Y%m%d_` | pbcopy'
+alias dps="docker ps --format 'table {{.Names}}\t{{.Image}}'"
 
 # local alias definitions
 if [ -f ~/.bash_aliases ]; then
