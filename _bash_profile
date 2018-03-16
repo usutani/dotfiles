@@ -110,3 +110,7 @@ ulimit -n 8096
 export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Wowza
+export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.3/java"
+export PATH="/usr/local/opt/curl/bin:$PATH"
