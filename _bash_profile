@@ -118,3 +118,6 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 # PHPBrew
 source ~/.phpbrew/bashrc
 
+# Laravel
+export PATH="~/.composer/vendor/bin:$PATH"
+
