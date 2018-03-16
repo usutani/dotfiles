@@ -114,3 +114,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 # Wowza
 export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.3/java"
 export PATH="/usr/local/opt/curl/bin:$PATH"
+
+# PHPBrew
+source ~/.phpbrew/bashrc
+
