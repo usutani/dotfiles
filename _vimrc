@@ -126,3 +126,7 @@ if expand("%:t") =~ ".*\.go"
   set softtabstop=4
   set nolist
 endif
+
+"PHP
+autocmd BufNewFile,BufRead *.php set filetype=php
+autocmd FileType php setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
