@@ -20,9 +20,6 @@ call dein#add('briancollins/vim-jst')
 
 call dein#add('fatih/vim-go')
 
-call dein#add('tpope/vim-fugitive')
-call dein#add('gregsexton/gitv')
-
 call dein#end()
 
 filetype plugin indent on
