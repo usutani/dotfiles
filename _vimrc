@@ -5,9 +5,9 @@ set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
 call dein#begin(expand('~/.vim/dein'))
 
-call dein#add('w0ng/vim-hybrid')
-call dein#add('justinmk/vim-dirvish')
-call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('w0ng/vim-hybrid') "colorscheme
+call dein#add('justinmk/vim-dirvish') " Directory viewer
+call dein#add('ctrlpvim/ctrlp.vim') " Fuzzy file finder
 call dein#add('kana/vim-fakeclip') "tmux
 
 call dein#add('vim-ruby/vim-ruby')
