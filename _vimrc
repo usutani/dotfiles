@@ -17,8 +17,6 @@ call dein#add('kchmck/vim-coffee-script')
 call dein#add('pangloss/vim-javascript')
 call dein#add('briancollins/vim-jst')
 
-call dein#add('fatih/vim-go')
-
 call dein#end()
 
 filetype plugin indent on
@@ -91,15 +89,6 @@ imap <C-e> <END>
 " RuboCop, JSHint
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript', 'json'] }
 let g:syntastic_ruby_checkers = ['rubocop']
-
-"Go
-if expand("%:t") =~ ".*\.go"
-  set noexpandtab
-  set tabstop=4
-  set shiftwidth=4
-  set softtabstop=4
-  set nolist
-endif
 
 "PHP
 autocmd BufNewFile,BufRead *.php set filetype=php
