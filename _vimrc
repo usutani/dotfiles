@@ -11,7 +11,6 @@ call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('kana/vim-fakeclip') "tmux
 
 call dein#add('vim-ruby/vim-ruby')
-"call dein#add('tpope/vim-endwise')
 call dein#add('ngmy/vim-rubocop')
 call dein#add('tpope/vim-rails')
 call dein#add('kchmck/vim-coffee-script')
