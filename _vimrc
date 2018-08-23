@@ -10,10 +10,6 @@ call dein#add('justinmk/vim-dirvish')
 call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('kana/vim-fakeclip') "tmux
 
-"call dein#add('neocomplete.vim')
-"call dein#add('Shougo/neosnippet')
-"call dein#add('Shougo/neosnippet-snippets')
-
 call dein#add('vim-ruby/vim-ruby')
 "call dein#add('tpope/vim-endwise')
 call dein#add('ngmy/vim-rubocop')
@@ -28,23 +24,6 @@ call dein#add('tpope/vim-fugitive')
 call dein#add('gregsexton/gitv')
 
 call dein#end()
-
-"neocomplete
-"let g:neocomplete#enable_at_startup = 1
-"autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
-"if !exists('g:neocomplete#force_omni_input_patterns')
-"  let g:neocomplete#force_omni_input_patterns = {}
-"endif
-"let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
-
-"neosnippet
-"imap <C-k> <Plug>(neosnippet_expand_or_jump)
-"smap <C-k> <Plug>(neosnippet_expand_or_jump)
-"imap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-"smap <expr><TAB> neosnippet#expandable() <Bar><bar> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-"if has('conceal')
-"  set conceallevel=2 concealcursor=i
-"endif
 
 filetype plugin indent on
 syntax on
