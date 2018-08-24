@@ -1,30 +1,46 @@
+"dein Scripts-----------------------------
 if &compatible
-  set nocompatible
+  set nocompatible               " Be iMproved
 endif
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
-call dein#begin(expand('~/.vim/dein'))
+" Required:
+set runtimepath+=/Users/usutani/.cache/dein/repos/github.com/Shougo/dein.vim
 
-call dein#add('w0ng/vim-hybrid') "colorscheme
-call dein#add('justinmk/vim-dirvish') "Directory viewer
-call dein#add('ctrlpvim/ctrlp.vim') "Fuzzy file finder
-call dein#add('kana/vim-fakeclip') "tmux
+" Required:
+if dein#load_state('/Users/usutani/.cache/dein')
+  call dein#begin('/Users/usutani/.cache/dein')
 
-call dein#add('vim-ruby/vim-ruby')
-call dein#add('ngmy/vim-rubocop')
-call dein#add('tpope/vim-rails')
-call dein#add('kchmck/vim-coffee-script')
-call dein#add('pangloss/vim-javascript')
-call dein#add('briancollins/vim-jst')
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/usutani/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-call dein#end()
+  call dein#add('w0ng/vim-hybrid') "colorscheme
+  call dein#add('justinmk/vim-dirvish') "Directory viewer
+  call dein#add('ctrlpvim/ctrlp.vim') "Fuzzy file finder
+  call dein#add('kana/vim-fakeclip') "tmux
 
+  call dein#add('vim-ruby/vim-ruby')
+  call dein#add('ngmy/vim-rubocop')
+  call dein#add('tpope/vim-rails')
+  call dein#add('kchmck/vim-coffee-script')
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('briancollins/vim-jst')
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
+
+" Required:
 filetype plugin indent on
-syntax on
+syntax enable
 
+" If you want to install not installed plugins on startup.
 if dein#check_install()
   call dein#install()
 endif
+
+"End dein Scripts-------------------------
 
 "colorscheme
 set background=dark
