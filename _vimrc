@@ -44,6 +44,7 @@ endif
 
 set nobackup
 set noswapfile
+
 set clipboard+=unnamed
 
 "encoding
@@ -51,16 +52,15 @@ set encoding=utf-8
 set fileencodings=ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,euc-jp,sjis,cp932,utf-8
 set fileformats=unix,dos
 
-set expandtab
-set tabstop=2 shiftwidth=2 softtabstop=2
-set autoindent
-set backspace=indent,eol,start
-
-let loaded_matchparen = 1
-set showmatch
-set number
 set hlsearch
 set list
+set number
+set showmatch
+
+set autoindent
+set backspace=indent,eol,start
+set expandtab
+set tabstop=2 shiftwidth=2 softtabstop=2
 
 "Programming language---------------------
 "ale
