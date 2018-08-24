@@ -42,10 +42,6 @@ endif
 
 "End dein Scripts-------------------------
 
-"colorscheme
-set background=dark
-colorscheme hybrid
-
 set nobackup
 set noswapfile
 set clipboard+=unnamed
@@ -63,7 +59,6 @@ set backspace=indent,eol,start
 let loaded_matchparen = 1
 set showmatch
 set number
-highlight LineNr ctermfg=darkGray guifg=darkGray
 set hlsearch
 
 set textwidth=0
@@ -87,18 +82,6 @@ augroup HighlightTrailingSpaces
   autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
 augroup END
 
-"diff color
-highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=22
-highlight DiffDelete cterm=bold ctermfg=10 ctermbg=52
-highlight DiffChange cterm=bold ctermfg=10 ctermbg=17
-highlight DiffText   cterm=bold ctermfg=10 ctermbg=21
-
-"completion menu color
-hi Pmenu ctermbg=0
-hi PmenuSel ctermbg=4
-hi PmenuSbar ctermbg=2
-hi PmenuThumb ctermfg=3
-
 " RuboCop, JSHint
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript', 'json'] }
 let g:syntastic_ruby_checkers = ['rubocop']
@@ -106,3 +89,9 @@ let g:syntastic_ruby_checkers = ['rubocop']
 "PHP
 autocmd BufNewFile,BufRead *.php set filetype=php
 autocmd FileType php setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
+
+"Color------------------------------------
+"colorscheme
+set background=dark
+colorscheme hybrid
+
