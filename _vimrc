@@ -60,27 +60,7 @@ let loaded_matchparen = 1
 set showmatch
 set number
 set hlsearch
-
-set textwidth=0
-if exists('&colorcolumn')
-  set colorcolumn=+1
-  autocmd FileType vim,ruby setlocal textwidth=80
-endif
-highlight ColorColumn ctermbg=235 guibg=#262626
-
 set list
-set listchars=trail:.,nbsp:%
-highlight SpecialKey term=underline ctermfg=Blue guifg=Blue
-"全角スペース
-highlight JpSpace cterm=underline ctermfg=Blue guifg=Blue
-au BufRead,BufNew * match JpSpace /　/
-
-"行末スペース
-augroup HighlightTrailingSpaces
-  autocmd!
-  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
-  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
-augroup END
 
 "Programming language---------------------
 "ale
@@ -92,4 +72,18 @@ let g:ale_fixers = {
 "colorscheme
 set background=dark
 colorscheme hybrid
+
+set textwidth=0
+if exists('&colorcolumn')
+  set colorcolumn=+1
+  autocmd FileType vim,ruby setlocal textwidth=80
+endif
+highlight ColorColumn ctermbg=235 guibg=#262626
+
+"行末スペース
+augroup HighlightTrailingSpaces
+  autocmd!
+  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
+augroup END
 
