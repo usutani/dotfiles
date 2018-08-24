@@ -56,6 +56,7 @@ set hlsearch
 set list
 set number
 set showmatch
+set textwidth=0
 
 set autoindent
 set backspace=indent,eol,start
@@ -73,12 +74,10 @@ let g:ale_fixers = {
 set background=dark
 colorscheme hybrid
 
-set textwidth=0
 if exists('&colorcolumn')
   set colorcolumn=+1
   autocmd FileType vim,ruby setlocal textwidth=80
 endif
-highlight ColorColumn ctermbg=235 guibg=#262626
 
 "行末スペース
 augroup HighlightTrailingSpaces
