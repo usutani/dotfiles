@@ -24,7 +24,7 @@ if dein#load_state('/Users/usutani/.cache/dein')
   call dein#add('ngmy/vim-rubocop')
   call dein#add('tpope/vim-rails')
   call dein#add('kchmck/vim-coffee-script')
-  call dein#add('pangloss/vim-javascript')
+  call dein#add('othree/yajs.vim')
   call dein#add('briancollins/vim-jst')
 
   " Required:
