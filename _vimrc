@@ -20,7 +20,6 @@ if dein#load_state('/Users/usutani/.cache/dein')
   call dein#add('kana/vim-fakeclip') "tmux
   call dein#add('w0rp/ale') "Asynchronous Lint Engine
 
-  call dein#add('vim-ruby/vim-ruby')
   call dein#add('ngmy/vim-rubocop')
   call dein#add('tpope/vim-rails')
   call dein#add('kchmck/vim-coffee-script')
