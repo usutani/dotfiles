@@ -18,6 +18,7 @@ if dein#load_state('/Users/usutani/.cache/dein')
   call dein#add('justinmk/vim-dirvish') "Directory viewer
   call dein#add('ctrlpvim/ctrlp.vim') "Fuzzy file finder
   call dein#add('kana/vim-fakeclip') "tmux
+  call dein#add('w0rp/ale') "Asynchronous Lint Engine
 
   call dein#add('vim-ruby/vim-ruby')
   call dein#add('ngmy/vim-rubocop')
@@ -82,13 +83,11 @@ augroup HighlightTrailingSpaces
   autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
 augroup END
 
-" RuboCop, JSHint
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby', 'javascript', 'json'] }
-let g:syntastic_ruby_checkers = ['rubocop']
-
-"PHP
-autocmd BufNewFile,BufRead *.php set filetype=php
-autocmd FileType php setlocal expandtab tabstop=4 softtabstop=4 shiftwidth=4
+"Programming language---------------------
+"ale
+let g:ale_fixers = {
+\   'ruby': ['rubocop'],
+\}
 
 "Color------------------------------------
 "colorscheme
