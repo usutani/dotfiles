@@ -112,7 +112,7 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Wowza
-export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.5/java"
+
 
 export PATH="/usr/local/opt/curl/bin:$PATH"
 
@@ -125,3 +125,4 @@ export PATH="~/.composer/vendor/bin:$PATH"
 # pyenv
 eval "$(pyenv init -)"
 
+export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.6/java"
