@@ -115,6 +115,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.6/java"
 
 # PHPBrew
+# brew install curl
+export PATH="/usr/local/opt/curl/bin:$PATH"
 source ~/.phpbrew/bashrc
 
 # Laravel
