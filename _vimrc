@@ -25,6 +25,7 @@ if dein#load_state('/Users/usutani/.cache/dein')
   call dein#add('kchmck/vim-coffee-script')
   call dein#add('othree/yajs.vim')
   call dein#add('briancollins/vim-jst')
+  call dein#add('slim-template/vim-slim.git')
 
   " Required:
   call dein#end()
