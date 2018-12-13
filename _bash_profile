@@ -78,51 +78,51 @@ alias ctags='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 # source ~/.oracle_client
 
 # Homebrew
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+# export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 # nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
+# export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # npm
-if [ -x "`which npm`" ]; then
-  export PATH=$PATH:$(npm config get prefix)/bin
-fi
+# if [ -x "`which npm`" ]; then
+#   export PATH=$PATH:$(npm config get prefix)/bin
+# fi
 
 ## bash-completion
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-. $(brew --prefix)/etc/bash_completion
-fi
+# if [ -f $(brew --prefix)/etc/bash_completion ]; then
+# . $(brew --prefix)/etc/bash_completion
+# fi
 
 # Java
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
-echo "JAVA_HOME=$JAVA_HOME"
+# export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+# export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+# echo "JAVA_HOME=$JAVA_HOME"
 
 # Go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
-ulimit -n 8096
+# export GOPATH=$HOME/go
+# export PATH=$PATH:$GOPATH/bin
+# ulimit -n 8096
 
 # Android
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/tools
-export PATH=$PATH:$ANDROID_HOME/platform-tools
+# export ANDROID_HOME=$HOME/Library/Android/sdk
+# export PATH=$PATH:$ANDROID_HOME/tools
+# export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Wowza
-export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.6/java"
+# export WMSJAVA_HOME="/Library/WowzaStreamingEngine-4.7.6/java"
 
 # PHPBrew
 # brew install curl
-export PATH="/usr/local/opt/curl/bin:$PATH"
-source ~/.phpbrew/bashrc
+# export PATH="/usr/local/opt/curl/bin:$PATH"
+# source ~/.phpbrew/bashrc
 
 # Laravel
-export PATH="~/.composer/vendor/bin:$PATH"
+# export PATH="~/.composer/vendor/bin:$PATH"
 
 # pyenv
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
