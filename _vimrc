@@ -87,3 +87,4 @@ augroup HighlightTrailingSpaces
   autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
 augroup END
 
+autocmd InsertLeave * set nopaste
