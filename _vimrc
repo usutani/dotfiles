@@ -15,8 +15,9 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   call dein#add('w0ng/vim-hybrid') "colorscheme
-  call dein#add('justinmk/vim-dirvish') "Directory viewer
-  call dein#add('ctrlpvim/ctrlp.vim') "Fuzzy file finder
+  call dein#add('preservim/nerdtree') "NERDTree
+  " call dein#add('justinmk/vim-dirvish') "Directory viewer
+  " call dein#add('ctrlpvim/ctrlp.vim') "Fuzzy file finder
   call dein#add('kana/vim-fakeclip') "tmux
   call dein#add('w0rp/ale') "Asynchronous Lint Engine
 
@@ -79,6 +80,11 @@ if exists('&colorcolumn')
   set colorcolumn=+1
   autocmd FileType vim,ruby setlocal textwidth=80
 endif
+
+"NERDTree---------------------------------
+"NERDTree automatically when vim starts up on opening a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
 
 "行末スペース
 augroup HighlightTrailingSpaces
