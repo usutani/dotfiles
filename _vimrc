@@ -15,6 +15,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   call dein#add('w0ng/vim-hybrid') "colorscheme
+  call dein#add('tpope/vim-fugitive') "fugitive
   call dein#add('itchyny/lightline.vim') "lightline
   call dein#add('preservim/nerdtree') "NERDTree
   " call dein#add('justinmk/vim-dirvish') "Directory viewer
