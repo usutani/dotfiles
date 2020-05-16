@@ -89,7 +89,7 @@ let g:lightline = {
     \ 'colorscheme': 'wombat' }
 let g:lightline.active = {
     \ 'left': [ [ 'mode', 'paste', 'modified' ],
-    \           [ 'readonly', 'relativepath', 'modified' ] ],
+    \           [ 'gitbranch', 'readonly', 'relativepath', 'modified' ] ],
     \ 'right': [ [ 'lineinfo' ],
     \            [ 'percent' ],
     \            [ 'fileformat', 'fileencoding', 'filetype' ] ] }
@@ -100,6 +100,8 @@ let g:lightline.inactive = {
 let g:lightline.tabline = {
     \ 'left': [ [ 'tabs' ] ],
     \ 'right': [ [ 'close' ] ] }
+let g:lightline.component_function = {
+    \ 'gitbranch': 'fugitive#head' }
 
 "NERDTree---------------------------------
 "NERDTree automatically when vim starts up on opening a directory
