@@ -15,6 +15,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('$HOME/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   call dein#add('w0ng/vim-hybrid') "colorscheme
+  call dein#add('itchyny/lightline.vim') "lightline
   call dein#add('preservim/nerdtree') "NERDTree
   " call dein#add('justinmk/vim-dirvish') "Directory viewer
   " call dein#add('ctrlpvim/ctrlp.vim') "Fuzzy file finder
@@ -80,6 +81,24 @@ if exists('&colorcolumn')
   set colorcolumn=+1
   autocmd FileType vim,ruby setlocal textwidth=80
 endif
+
+"lightline
+set laststatus=2
+let g:lightline = {
+    \ 'colorscheme': 'wombat' }
+let g:lightline.active = {
+    \ 'left': [ [ 'mode', 'paste', 'modified' ],
+    \           [ 'readonly', 'relativepath', 'modified' ] ],
+    \ 'right': [ [ 'lineinfo' ],
+    \            [ 'percent' ],
+    \            [ 'fileformat', 'fileencoding', 'filetype' ] ] }
+let g:lightline.inactive = {
+    \ 'left': [ ['modified'], [ 'relativepath' ] ],
+    \ 'right': [ [ 'lineinfo' ],
+    \            [ 'percent' ] ] }
+let g:lightline.tabline = {
+    \ 'left': [ [ 'tabs' ] ],
+    \ 'right': [ [ 'close' ] ] }
 
 "NERDTree---------------------------------
 "NERDTree automatically when vim starts up on opening a directory
