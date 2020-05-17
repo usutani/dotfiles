@@ -24,6 +24,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('w0rp/ale') "Asynchronous Lint Engine
 
   call dein#add('ngmy/vim-rubocop')
+  call dein#add('tpope/vim-endwise')
   call dein#add('tpope/vim-rails')
   call dein#add('kchmck/vim-coffee-script')
   call dein#add('othree/yajs.vim')
