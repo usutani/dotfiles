@@ -23,6 +23,10 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('kana/vim-fakeclip') "tmux
   call dein#add('w0rp/ale') "Asynchronous Lint Engine
 
+  "fzf: brew install fzf
+  call dein#add('junegunn/fzf', { 'build': './install --all', 'merged': 0 })
+  call dein#add('junegunn/fzf.vim', { 'depends': 'fzf' })
+
   call dein#add('tyru/caw.vim') "Vim comment plugin. e.g., toggle: gcc
 
   call dein#add('ngmy/vim-rubocop')
@@ -118,6 +122,12 @@ let g:lightline.component_function = {
 "NERDTree automatically when vim starts up on opening a directory
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | exe 'cd '.argv()[0] | endif
+
+"fzf
+nnoremap <silent> ,f :GFiles<CR>
+nnoremap <silent> ,F :GFiles?<CR>
+nnoremap <silent> ,b :Buffers<CR>
+nnoremap <silent> ,l :BLines<CR>
 
 "Change cursor shape in different modes
 "https://vim.fandom.com/wiki/Change_cursor_shape_in_different_modes
