@@ -23,7 +23,7 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('kana/vim-fakeclip') "tmux
   call dein#add('w0rp/ale') "Asynchronous Lint Engine
 
-  call dein#add('tyru/caw.vim')
+  call dein#add('tyru/caw.vim') "Vim comment plugin. e.g., toggle: gcc
 
   call dein#add('ngmy/vim-rubocop')
   call dein#add('tpope/vim-endwise')
