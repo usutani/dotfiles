@@ -95,7 +95,7 @@ colorscheme hybrid
 
 if exists('&colorcolumn')
   set colorcolumn=+1
-  autocmd FileType vim,ruby setlocal textwidth=80
+  autocmd FileType vim,ruby setlocal textwidth=120
 endif
 
 "lightline
