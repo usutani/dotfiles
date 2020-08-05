@@ -39,6 +39,8 @@ if dein#load_state('$HOME/.cache/dein')
 
   call dein#add('neoclide/coc.nvim', { 'rev': 'release' }) "solargraph
 
+  call dein#add('mechatroner/rainbow_csv')
+
   " Required:
   call dein#end()
   call dein#save_state()
