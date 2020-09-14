@@ -156,14 +156,3 @@ augroup HighlightTrailingSpaces
 augroup END
 
 autocmd InsertLeave * set nopaste
-
-"削除時にブラックホールレジスタを使わない
-vnoremap d "_d
-nnoremap d "_d
-vnoremap D "_D
-nnoremap D "_D
-vnoremap x "_x
-nnoremap x "_x
-vnoremap s "_s
-nnoremap s "_s
-
