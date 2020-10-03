@@ -156,3 +156,6 @@ augroup HighlightTrailingSpaces
 augroup END
 
 autocmd InsertLeave * set nopaste
+
+" 0(ゼロ)レジスタからペースト
+:nnoremap PP "0p
