@@ -159,3 +159,7 @@ autocmd InsertLeave * set nopaste
 
 " 0(ゼロ)レジスタからペースト
 :nnoremap PP "0p
+
+" 連続してインデント
+vnoremap > >gv
+vnoremap < <gv
