@@ -1,0 +1,49 @@
+export LANG=ja_JP.UTF-8
+
+# brew install zsh-completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# Git
+# https://git-scm.com/book/en/v2/Appendix-A:-Git-in-Other-Environments-Git-in-Zsh
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT=\$vcs_info_msg_0_
+# PROMPT=\$vcs_info_msg_0_'%# '
+zstyle ':vcs_info:git:*' formats '%b'
+
+# Homebrew's
+export PATH="/usr/local/sbin:$PATH"
+
+eval "$(rbenv init -)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+function rgless(){
+  rg -p "$@" | less -R
+}
+
+alias c=cot
+alias g=git
+alias r=./bin/rails
+alias rr='./bin/rails routes'
+alias rgm='./bin/rails g migration'
+alias v=vim
+alias be='bundle exec'
+
+alias o='open .'
+alias ll='ls -la'
+alias cdd='cd ~/Desktop'
+alias u='cd ..'
+alias uu='cd ../../'
+alias uuu='cd ../../../'
+
+if [ -f ~/.zsh_aliases ]; then
+  . ~/.zsh_aliases
+fi
