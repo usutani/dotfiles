@@ -37,6 +37,8 @@ if dein#load_state('$HOME/.cache/dein')
   call dein#add('briancollins/vim-jst')
   call dein#add('slim-template/vim-slim.git')
 
+  call dein#add('rust-lang/rust.vim')
+
   call dein#add('neoclide/coc.nvim', { 'rev': 'release' }) "solargraph
 
   call dein#add('mechatroner/rainbow_csv')
