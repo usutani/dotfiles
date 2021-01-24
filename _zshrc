@@ -31,6 +31,7 @@ function rgless(){
 
 alias c=cot
 alias g=git
+alias b=./bin/bundle
 alias r=./bin/rails
 alias rr='./bin/rails routes'
 alias rgm='./bin/rails g migration'
