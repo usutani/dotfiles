@@ -29,14 +29,16 @@ function rgless(){
   rg -p "$@" | less -R
 }
 
+alias v=vim
 alias c=cot
 alias g=git
+
+alias be='bundle exec'
 alias b=./bin/bundle
 alias r=./bin/rails
 alias rr='./bin/rails routes'
 alias rgm='./bin/rails g migration'
-alias v=vim
-alias be='bundle exec'
+alias tailrailslog='less -i -M -R +F log/development.log'
 
 alias o='open .'
 alias ll='ls -la'
