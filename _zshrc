@@ -39,6 +39,7 @@ alias r=./bin/rails
 alias rr='./bin/rails routes'
 alias rgm='./bin/rails g migration'
 alias tailrailslog='less -i -M -R +F log/development.log'
+alias d=./bin/dev
 
 alias o='open .'
 alias ll='ls -la'
