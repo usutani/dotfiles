@@ -23,6 +23,9 @@ export PATH="/usr/local/sbin:$PATH"
 
 eval "$(rbenv init -)"
 
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 function rgless(){
